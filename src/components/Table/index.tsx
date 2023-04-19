@@ -17,6 +17,8 @@ const Table = ({transactions}: TableProps) => {
 							width: '100%',
 							backgroundColor:'#29292E',
 							margin: '4px 0px',
+							padding: '20px',
+							borderRadius: '5px',
 							color:'#fff',
 							display: 'flex',
 							justifyContent:'space-between'
@@ -31,8 +33,12 @@ const Table = ({transactions}: TableProps) => {
 						<Typography 
 							variant='body1' 
 							component='h4'
+							color={t.type ? '#0f0' : '#f00'}
 						> 
-							{t.price} 
+							{
+								!t.type && '-'
+							}	
+                                   R$ {t.price} 
 						</Typography>
 						<Typography 
 							variant='body1' 
